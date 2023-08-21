@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#2a3140" />
+    <meta property="og:image" content="https://v2.picocss.com/opengraph.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Pico CSS" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:domain" content="https://v2.picocss.com" />
+    <meta name="twitter:site" content="@picocss" />
+    <title>Button • Pico CSS</title>
+    <meta name="description" content="Buttons are using the native &lt;button&gt; tag, without .classes for the default style." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/build/_assets/main-SLQFAPZM.css" />
+    <link rel="stylesheet" href="/build/_assets/docs-DMY4KPKF.css" />
+</head>
+
+<body style="min-height:100vh">
+    <header class="is-fixed-above-lg">
+        <div class="container"><a aria-label="Pico CSS homepage" href="/docs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 381 164" fill="none" class="pico-logo">
+                    <path d="M355.83 57.6809a1.998 1.998 0 0 0-1.149 1.1487l-7.814 20.317c-.658 1.7094-3.076 1.7094-3.734 0l-7.814-20.317a1.998 1.998 0 0 0-1.149-1.1487l-20.317-7.8142c-1.709-.6575-1.709-3.0759 0-3.7334l20.317-7.8142a1.998 1.998 0 0 0 1.149-1.1487l7.814-20.317c.658-1.7094 3.076-1.7094 3.734 0l7.814 20.317c.203.5281.62.9455 1.149 1.1487l20.317 7.8142c1.709.6575 1.709 3.0759 0 3.7334l-20.317 7.8142Z" fill="var(--pico-logo-big-sparkle)"></path>
+                    <path d="M298.867 31.1466c-.658 1.7094-3.076 1.7094-3.734 0l-2.814-7.317a1.998 1.998 0 0 0-1.149-1.1487l-7.317-2.8142c-1.709-.6575-1.709-3.0759 0-3.7334l7.317-2.8142a1.998 1.998 0 0 0 1.149-1.1487l2.814-7.317c.658-1.7094 3.076-1.7094 3.734 0l2.814 7.317c.203.5281.62.9455 1.149 1.1487l7.317 2.8142c1.709.6575 1.709 3.0759 0 3.7334l-7.317 2.8142a1.998 1.998 0 0 0-1.149 1.1487l-2.814 7.317Z" fill="var(--pico-logo-small-sparkles)"></path>
+                    <path d="M314.83 82.6809a1.998 1.998 0 0 0-1.149 1.1487l-2.814 7.317c-.658 1.7094-3.076 1.7094-3.734 0l-2.814-7.317a1.998 1.998 0 0 0-1.149-1.1487l-7.317-2.8142c-1.709-.6575-1.709-3.0759 0-3.7334l7.317-2.8142a1.998 1.998 0 0 0 1.149-1.1487l2.814-7.317c.658-1.7094 3.076-1.7094 3.734 0l2.814 7.317c.203.5281.62.9455 1.149 1.1487l7.317 2.8142c1.709.6575 1.709 3.0759 0 3.7334l-7.317 2.8142Z" fill="var(--pico-logo-small-sparkles)"></path>
+                    <path d="M0 164V62.7234h21.1769l1.2965 13.3106V164H0Zm42.93-27.2c-5.9545 0-10.9486-1.495-14.9823-4.485-4.0337-3.087-7.0589-7.475-9.0758-13.166-2.0168-5.691-3.0253-12.443-3.0253-20.2554 0-7.9092 1.0085-14.661 3.0253-20.2553 2.0169-5.6908 5.0421-10.0312 9.0758-13.0213 4.0337-3.0865 9.0278-4.6298 14.9823-4.6298 6.7228 0 12.5333 1.5433 17.4313 4.6298 4.8981 2.9901 8.6436 7.3305 11.2367 13.0213 2.5931 5.5943 3.8897 12.3461 3.8897 20.2553 0 7.8124-1.2966 14.5644-3.8897 20.2554-2.5931 5.691-6.3386 10.079-11.2367 13.166-4.898 2.99-10.7085 4.485-17.4313 4.485Zm-5.7624-20.834c2.8812 0 5.4263-.723 7.6352-2.17s3.9857-3.424 5.3302-5.932c1.3446-2.604 2.0169-5.595 2.0169-8.9704 0-3.3759-.6243-6.3177-1.8728-8.8255-1.2485-2.6043-3.0253-4.6298-5.3302-6.0766-2.209-1.4468-4.754-2.1702-7.6352-2.1702-2.8813 0-5.4743.7234-7.7793 2.1702-2.2089 1.4468-3.9377 3.4723-5.1862 6.0766-1.2485 2.6042-1.8728 5.5461-1.8728 8.8255 0 3.3754.6243 6.3664 1.8728 8.9704 1.2485 2.508 2.9773 4.485 5.1862 5.932 2.2089 1.447 4.754 2.17 7.6352 2.17Zm50.6327 19.098V62.7234h22.4737v72.3406H87.8003ZM99.037 53.4638c-3.3614 0-6.3386-1.2539-8.9317-3.7617-2.4971-2.6042-3.7456-5.5943-3.7456-8.9702 0-3.5688 1.2485-6.5589 3.7456-8.9702C92.6984 29.2539 95.6756 28 99.037 28c3.457 0 6.435 1.2539 8.932 3.7617 2.497 2.4113 3.745 5.4014 3.745 8.9702 0 3.3759-1.248 6.366-3.745 8.9702-2.497 2.5078-5.475 3.7617-8.932 3.7617ZM162.188 136.8c-7.683 0-14.55-1.591-20.6-4.774-5.955-3.28-10.613-7.765-13.974-13.456-3.362-5.787-5.042-12.346-5.042-19.6764 0-7.4269 1.68-13.9858 5.042-19.6766 3.361-5.6908 7.971-10.1276 13.83-13.3106 5.954-3.2795 12.773-4.9192 20.456-4.9192 7.395 0 14.166 1.8809 20.313 5.6426 6.146 3.7617 10.564 9.2113 13.253 16.3489l-21.321 7.2341c-1.056-2.3149-2.833-4.1958-5.33-5.6426-2.401-1.5433-5.09-2.3149-8.067-2.3149-2.977 0-5.619.7234-7.924 2.1702-2.208 1.3504-3.985 3.2795-5.33 5.7873-1.248 2.5078-1.873 5.4014-1.873 8.6808s.625 6.1734 1.873 8.6804c1.345 2.412 3.17 4.341 5.475 5.788 2.401 1.447 5.09 2.17 8.067 2.17 2.977 0 5.666-.772 8.067-2.315s4.178-3.569 5.331-6.077l21.32 7.234c-2.785 7.235-7.251 12.781-13.397 16.639-6.051 3.858-12.774 5.787-20.169 5.787Zm78.636 0c-7.587 0-14.31-1.591-20.168-4.774-5.763-3.28-10.325-7.765-13.686-13.456-3.266-5.691-4.898-12.249-4.898-19.6764 0-7.4269 1.632-13.9858 4.898-19.6766 3.265-5.6908 7.779-10.1276 13.541-13.3106 5.859-3.2795 12.486-4.9192 19.881-4.9192 7.587 0 14.262 1.6397 20.024 4.9192 5.859 3.183 10.421 7.6198 13.686 13.3106C277.367 84.9078 279 91.4667 279 98.8936c0 7.4274-1.633 13.9854-4.898 19.6764-3.265 5.691-7.779 10.176-13.542 13.456-5.666 3.183-12.245 4.774-19.736 4.774Zm-.144-21.413c2.977 0 5.522-.675 7.635-2.025 2.209-1.447 3.938-3.376 5.186-5.788 1.249-2.507 1.873-5.401 1.873-8.6804 0-3.2794-.672-6.1248-2.017-8.5362-1.248-2.5078-2.977-4.4368-5.186-5.7872-2.209-1.4468-4.754-2.1702-7.635-2.1702-2.881 0-5.426.7234-7.635 2.1702-2.209 1.3504-3.938 3.2794-5.187 5.7872-1.248 2.4114-1.872 5.2568-1.872 8.5362 0 3.1834.624 6.0284 1.872 8.5364 1.249 2.508 2.978 4.485 5.187 5.932 2.305 1.35 4.898 2.025 7.779 2.025Z" fill="var(--pico-logo-wordmark)"></path>
+                </svg></a>
+            <nav>
+                <ul>
+                    <li>
+                        <details class="dropdown">
+                            <summary>v2.0.0-alpha1</summary>
+                            <ul dir="rtl">
+                                <li><a aria-current="page" dir="ltr" href="/docs/button"><span>v2.0.0-alpha1</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path id="check-icon" d="M5 12l5 5l10 -10"></path>
+                                        </svg></a></li>
+                                <li><a rel="noopener noreferrer" href="https://picocss.com/docs/" target="_blank">v1.5.10</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="hide-before-sm"><a class="contrast" href="/docs">Docs</a></li>
+                    <li><a rel="noopener noreferrer" class="contrast" aria-label="GitHub repository" href="https://github.com/picocss/pico" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                            </svg></a></li>
+                    <li><a rel="noopener noreferrer" class="contrast" aria-label="Twitter" href="https://twitter.com/picocss" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                            </svg></a></li>
+                    <li><a class="contrast" aria-label="Turn on dark mode" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor" class="theme-toggle">
+                                <clipPath id="theme-toggle-cutout">
+                                    <path d="M0-11h25a1 1 0 0017 13v30H0Z"></path>
+                                </clipPath>
+                                <g clip-path="url(#theme-toggle-cutout)">
+                                    <circle cx="16" cy="16" r="8.4"></circle>
+                                    <path d="M18.3 3.2c0 1.3-1 2.3-2.3 2.3s-2.3-1-2.3-2.3S14.7.9 16 .9s2.3 1 2.3 2.3zm-4.6 25.6c0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.3-2.3 2.3-2.3-1-2.3-2.3zm15.1-10.5c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zM3.2 13.7c1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3S.9 17.3.9 16s1-2.3 2.3-2.3zm5.8-7C9 7.9 7.9 9 6.7 9S4.4 8 4.4 6.7s1-2.3 2.3-2.3S9 5.4 9 6.7zm16.3 21c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zm2.4-21c0 1.3-1 2.3-2.3 2.3S23 7.9 23 6.7s1-2.3 2.3-2.3 2.4 1 2.4 2.3zM6.7 23C8 23 9 24 9 25.3s-1 2.3-2.3 2.3-2.3-1-2.3-2.3 1-2.3 2.3-2.3z"></path>
+                                </g>
+                            </svg></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container has-table-of-contents" id="button">
+        <nav aria-label="breadcrumb">
+            <ul>
+                <li><a class="secondary" href="/docs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 6l16 0"></path>
+                            <path d="M4 12l16 0"></path>
+                            <path d="M4 18l16 0"></path>
+                        </svg>Documentation</a></li>
+                <li>Content</li>
+            </ul>
+        </nav>
+        <aside id="documentation-menu">
+            <header>
+                <h2>Documentation</h2><a aria-label="Close" class="secondary" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                    </svg></a>
+            </header>
+            <nav>
+                <details>
+                    <summary>Getting started</summary>
+                    <ul>
+                        <li><a class="secondary" href="/docs">Quick start</a></li>
+                        <li><a class="secondary" href="/docs/color-schemes">Color schemes</a></li>
+                        <li><a class="secondary" href="/docs/classless">Class-less version</a></li>
+                        <li><a class="secondary" href="/docs/rtl">RTL</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Customization</summary>
+                    <ul>
+                        <li><a class="secondary" href="/docs/css-variables">CSS Variables</a></li>
+                        <li><a class="secondary" href="/docs/theme-generator">Theme generator</a></li>
+                        <li><a class="secondary" href="/docs/sass">Sass</a></li>
+                        <li><a class="secondary" href="/docs/colors">Colors <mark>New</mark></a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Layout</summary>
+                    <ul>
+                        <li><a class="secondary" href="/docs/container">Container</a></li>
+                        <li><a class="secondary" href="/docs/landmarks-section">Landmarks &amp; section</a></li>
+                        <li><a class="secondary" href="/docs/grid">Grid</a></li>
+                        <li><a class="secondary" href="/docs/scroller">Horizontal scroller</a></li>
+                    </ul>
+                </details>
+                <details open>
+                    <summary aria-current="true">Content</summary>
+                    <ul>
+                        <li><a class="secondary" href="/docs/typography">Typography</a></li>
+                        <li><a class="secondary" href="/docs/link">Link</a></li>
+                        <li><a aria-current="page" class="secondary" href="/docs/button">Button</a></li>
+                        <li><a class="secondary" href="/docs/table">Table</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Forms</summary>
+                    <ul>
+                        <li><a class="secondary" href="/docs/forms">Overview</a></li>
+                        <li><a class="secondary" href="/docs/forms/input">Input</a></li>
+                        <li><a class="secondary" href="/docs/forms/textarea">Textarea</a></li>
+                        <li><a class="secondary" href="/docs/forms/select">Select</a></li>
+                        <li><a class="secondary" href="/docs/forms/checkboxes">Checkboxes</a></li>
+                        <li><a class="secondary" href="/docs/forms/radios">Radios</a></li>
+                        <li><a class="secondary" href="/docs/forms/switch">Switch</a></li>
+                        <li><a class="secondary" href="/docs/forms/range">Range</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Components</summary>
+                    <ul>
+                        <li><a class="secondary" href="/docs/accordion">Accordion</a></li>
+                        <li><a class="secondary" href="/docs/card">Card</a></li>
+                        <li><a class="secondary" href="/docs/dropdown">Dropdown</a></li>
+                        <li><a class="secondary" href="/docs/group">Group <mark>New</mark></a></li>
+                        <li><a class="secondary" href="/docs/loading">Loading</a></li>
+                        <li><a class="secondary" href="/docs/modal">Modal</a></li>
+                        <li><a class="secondary" href="/docs/nav">Nav</a></li>
+                        <li><a class="secondary" href="/docs/progress">Progress</a></li>
+                        <li><a class="secondary" href="/docs/tooltip">Tooltip</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>About</summary>
+                    <ul>
+                        <li><a class="secondary" href="/docs/v2">What’s new in v2?</a></li>
+                        <li><a class="secondary" href="/docs/mission">Mission</a></li>
+                        <li><a class="secondary" href="/docs/usage-scenarios">Usage scenarios</a></li>
+                        <li><a class="secondary" href="/docs/brand">Brand</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </aside>
+        <hgroup>
+            <p class="chapter">Content</p>
+            <h1>Button</h1>
+            <p>Buttons are using the native <code><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span></code> tag, without<!-- --> <code><span class>.classes</span></code>. for the default style.</p>
+        </hgroup>
+        <aside id="table-of-contents">
+            <nav>
+                <details open>
+                    <summary>Content</summary>
+                    <ul>
+                        <li><a class="secondary" href="/docs/button">Syntax</a></li>
+                        <li><a class="secondary" href="/docs/button#variants">Variants</a></li>
+                        <li><a class="secondary" href="/docs/button#form-buttons">Form buttons</a></li>
+                        <li><a class="secondary" href="/docs/button#disabled">Disabled</a></li>
+                        <li><a class="secondary" href="/docs/button#role-button">Role button</a></li>
+                        <li><a class="secondary" href="/docs/button#usage-with-group">Usage with group</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </aside>
+        <div role="document">
+            <section aria-label="Overview">
+                <article aria-label="Button example" class="component"><button>Button</button>
+                    <footer class="code small" data-theme="dark"><a class="copy-to-clipboard" tabindex="-1" aria-label="Copy code" data-tooltip="Copy to clipboard" data-placement="left" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="clipboard">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                            </svg></a>
+                        <pre><code><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>Button</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span></code></pre>
+                    </footer>
+                </article>
+            </section>
+            <section>
+                <h2>Variants<a href="#variants" id="variants" class="secondary" tabindex="-1">#</a></h2>
+                <p>Buttons come with <code><span class>.secondary</span></code> and<!-- --> <code><span class>.contrast</span></code> styles (not available in the<!-- --> <a href="/docs/classless">class-less version</a>).</p>
+                <article aria-label="Button colors example" class="component">
+                    <div class="grid"><button class="secondary">Secondary</button><button class="contrast">Contrast</button></div>
+                    <footer class="code" data-theme="dark"><a class="copy-to-clipboard" tabindex="-1" aria-label="Copy code" data-tooltip="Copy to clipboard" data-placement="left" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="clipboard">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                            </svg></a>
+                        <pre><code><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag"> </span><span class="token tag attr-name">class</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">secondary</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag punctuation">&gt;</span><span class>Secondary</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class></span><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag"> </span><span class="token tag attr-name">class</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">contrast</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag punctuation">&gt;</span><span class>Contrast</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span></code></pre>
+                    </footer>
+                </article>
+                <p>They also come with a classic outline style (not available in the<!-- --> <a href="/docs/classless">class-less version</a>).</p>
+                <article aria-label="Buttons outline example" class="component">
+                    <div class="grid"><button class="outline">Primary</button><button class="outline secondary">Secondary</button><button class="outline contrast">Contrast</button></div>
+                    <footer class="code" data-theme="dark"><a class="copy-to-clipboard" tabindex="-1" aria-label="Copy code" data-tooltip="Copy to clipboard" data-placement="left" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="clipboard">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                            </svg></a>
+                        <pre><code><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag"> </span><span class="token tag attr-name">class</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">outline</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag punctuation">&gt;</span><span class>Primary</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class></span><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag"> </span><span class="token tag attr-name">class</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">outline secondary</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag punctuation">&gt;</span><span class>Secondary</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class></span><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag"> </span><span class="token tag attr-name">class</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">outline contrast</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag punctuation">&gt;</span><span class>Contrast</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span></code></pre>
+                    </footer>
+                </article>
+            </section>
+            <section>
+                <h2>Form buttons<a href="#form-buttons" id="form-buttons" class="secondary" tabindex="-1">#</a></h2>
+                <p><code><span class>type=&quot;submit&quot;</span></code> and<!-- --> <code><span class>type=&quot;button&quot;</span></code> inputs are also displayed as buttons. All form buttons are <code><span class>width: 100%;</span></code> by default, to match with the other form elements.</p>
+                <article aria-label="Input buttons example" class="component"><input type="submit" /><input type="button" value="Input" />
+                    <footer class="code" data-theme="dark"><a class="copy-to-clipboard" tabindex="-1" aria-label="Copy code" data-tooltip="Copy to clipboard" data-placement="left" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="clipboard">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                            </svg></a>
+                        <pre><code><span class="token tag punctuation">&lt;</span><span class="token tag">input</span><span class="token tag"> </span><span class="token tag attr-name">type</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">submit</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag"> </span><span class="token tag punctuation">/&gt;</span><span class>
+                                </span><span class></span><span class="token tag punctuation">&lt;</span><span class="token tag">input</span><span class="token tag"> </span><span class="token tag attr-name">type</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">button</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag"> </span><span class="token tag attr-name">value</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">Input</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag"> </span><span class="token tag punctuation">/&gt;</span></code></pre>
+                    </footer>
+                </article>
+                <p>Reset inputs have the secondary style by default.</p>
+                <article aria-label="Reset input example" class="component"><input type="reset" />
+                    <footer class="code small" data-theme="dark"><a class="copy-to-clipboard" tabindex="-1" aria-label="Copy code" data-tooltip="Copy to clipboard" data-placement="left" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="clipboard">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                            </svg></a>
+                        <pre><code><span class="token tag punctuation">&lt;</span><span class="token tag">input</span><span class="token tag"> </span><span class="token tag attr-name">type</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">reset</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag"> </span><span class="token tag punctuation">/&gt;</span></code></pre>
+                    </footer>
+                </article>
+            </section>
+            <section>
+                <h2>Disabled<a href="#disabled" id="disabled" class="secondary" tabindex="-1">#</a></h2>
+                <p>Buttons come with a disabled style.</p>
+                <article aria-label="Disabled buttons example" class="component">
+                    <div class="grid"><button disabled>Disabled</button><button class="secondary" disabled>Disabled</button><button class="contrast" disabled>Disabled</button></div>
+                    <footer class="code" data-theme="dark"><a class="copy-to-clipboard" tabindex="-1" aria-label="Copy code" data-tooltip="Copy to clipboard" data-placement="left" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="clipboard">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                            </svg></a>
+                        <pre><code><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag"> </span><span class="token tag attr-name">disabled</span><span class="token tag punctuation">&gt;</span><span class>Disabled</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class></span><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag"> </span><span class="token tag attr-name">class</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">secondary</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag"> </span><span class="token tag attr-name">disabled</span><span class="token tag punctuation">&gt;</span><span class>Disabled</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class></span><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag"> </span><span class="token tag attr-name">class</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">contrast</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag"> </span><span class="token tag attr-name">disabled</span><span class="token tag punctuation">&gt;</span><span class>Disabled</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span></code></pre>
+                    </footer>
+                </article>
+            </section>
+            <section>
+                <h2>Role button<a href="#role-button" id="role-button" class="secondary" tabindex="-1">#</a></h2>
+                <p>Clickable elements with <code><span class>role=&quot;button&quot;</span></code> are rendered as buttons.</p>
+                <article aria-label="Role button example" class="component">
+                    <div role="button" tabindex="0">Div as button</div>
+                    <footer class="code small" data-theme="dark"><a class="copy-to-clipboard" tabindex="-1" aria-label="Copy code" data-tooltip="Copy to clipboard" data-placement="left" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="clipboard">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                            </svg></a>
+                        <pre><code><span class="token tag punctuation">&lt;</span><span class="token tag">div</span><span class="token tag"> </span><span class="token tag attr-name">role</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">button</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag"> </span><span class="token tag attr-name">tabindex</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">0</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag punctuation">&gt;</span><span class>Div as a button</span><span class="token tag punctuation">&lt;/</span><span class="token tag">div</span><span class="token tag punctuation">&gt;</span></code></pre>
+                    </footer>
+                </article>
+            </section>
+            <section>
+                <h2>Usage with group<a href="#usage-with-group" id="usage-with-group" class="secondary" tabindex="-1">#</a></h2>
+                <p>You can use <code><span class>role=&quot;group&quot;</span></code> with buttons. See<!-- --> <a href="/docs/group">Group</a>.</p>
+                <article class="component" aria-label="Group example">
+                    <div role="group"><button>Button</button><button>Button</button><button>Button</button></div>
+                    <footer class="code" data-theme="dark"><a class="copy-to-clipboard" tabindex="-1" aria-label="Copy code" data-tooltip="Copy to clipboard" data-placement="left" href="/docs/button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="clipboard">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                            </svg></a>
+                        <pre><code><span class="token tag punctuation">&lt;</span><span class="token tag">div</span><span class="token tag"> </span><span class="token tag attr-name">role</span><span class="token tag attr-value punctuation attr-equals">=</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag attr-value">group</span><span class="token tag attr-value punctuation">&quot;</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class> </span><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>Button</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class> </span><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>Button</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class> </span><span class="token tag punctuation">&lt;</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>Button</span><span class="token tag punctuation">&lt;/</span><span class="token tag">button</span><span class="token tag punctuation">&gt;</span><span class>
+                                </span><span class></span><span class="token tag punctuation">&lt;/</span><span class="token tag">div</span><span class="token tag punctuation">&gt;</span></code></pre>
+                    </footer>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="279 0 102 93" fill="none" class="pico-icon">
+                <path d="M355.83 57.6809a1.998 1.998 0 0 0-1.149 1.1487l-7.814 20.317c-.658 1.7094-3.076 1.7094-3.734 0l-7.814-20.317a1.998 1.998 0 0 0-1.149-1.1487l-20.317-7.8142c-1.709-.6575-1.709-3.0759 0-3.7334l20.317-7.8142a1.998 1.998 0 0 0 1.149-1.1487l7.814-20.317c.658-1.7094 3.076-1.7094 3.734 0l7.814 20.317c.203.5281.62.9455 1.149 1.1487l20.317 7.8142c1.709.6575 1.709 3.0759 0 3.7334l-20.317 7.8142Z" fill="var(--pico-logo-big-sparkle)"></path>
+                <path d="M298.867 31.1466c-.658 1.7094-3.076 1.7094-3.734 0l-2.814-7.317a1.998 1.998 0 0 0-1.149-1.1487l-7.317-2.8142c-1.709-.6575-1.709-3.0759 0-3.7334l7.317-2.8142a1.998 1.998 0 0 0 1.149-1.1487l2.814-7.317c.658-1.7094 3.076-1.7094 3.734 0l2.814 7.317c.203.5281.62.9455 1.149 1.1487l7.317 2.8142c1.709.6575 1.709 3.0759 0 3.7334l-7.317 2.8142a1.998 1.998 0 0 0-1.149 1.1487l-2.814 7.317Z" fill="var(--pico-logo-small-sparkles)"></path>
+                <path d="M314.83 82.6809a1.998 1.998 0 0 0-1.149 1.1487l-2.814 7.317c-.658 1.7094-3.076 1.7094-3.734 0l-2.814-7.317a1.998 1.998 0 0 0-1.149-1.1487l-7.317-2.8142c-1.709-.6575-1.709-3.0759 0-3.7334l7.317-2.8142a1.998 1.998 0 0 0 1.149-1.1487l2.814-7.317c.658-1.7094 3.076-1.7094 3.734 0l2.814 7.317c.203.5281.62.9455 1.149 1.1487l7.317 2.8142c1.709.6575 1.709 3.0759 0 3.7334l-7.317 2.8142Z" fill="var(--pico-logo-small-sparkles)"></path>
+            </svg>
+            <div>
+                <p>Created and maintained by<!-- --> <a rel="noopener noreferrer" class="contrast" href="https://lucaslarroche.com/" target="_blank">Lucas Larroche</a> <!-- -->with the help of an amazing community of<!-- --> <a rel="noopener noreferrer" class="contrast" href="https://github.com/picocss/pico/graphs/contributors" target="_blank">contributors</a>.</p>
+                <p>Code licensed<!-- --> <a rel="noopener noreferrer" class="secondary" href="https://github.com/picocss/pico/blob/master/LICENSE.md" target="_blank">MIT</a>, docs<!-- --> <a rel="noopener noreferrer" class="secondary" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p>
+                <p>Currently v<!-- -->2.0.0-alpha1<!-- -->.</p>
+            </div>
+        </div>
+    </footer>
+    <script>((n, c) => {
+            if (!window.history.state || !window.history.state.key) {
+                let l = Math.random().toString(32).slice(2);
+                window.history.replaceState({ key: l }, "");
+            }
+            try {
+                let s = JSON.parse(sessionStorage.getItem(n) || "{}")[c || window.history.state.key];
+                typeof s == "number" && window.scrollTo(0, s);
+            } catch (l) {
+                console.error(l), sessionStorage.removeItem(n);
+            }
+        })("positions", null)</script>
+    <link rel="modulepreload" href="/build/manifest-261F0EBC.js" />
+    <link rel="modulepreload" href="/build/entry.client-JUQKH57E.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-FQRMCQSO.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-5YJA6Z2A.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-6QRXL6JZ.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-AMPUJTYI.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-OKA47VTL.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-NXR7KSIS.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-46BAOZMJ.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-3TEVIPMX.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-WMMOCW4E.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-QV7Y27YB.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-ACWZKZR7.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-PDWLRD7U.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-M6CJDDQ3.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-GTETT7TF.js" />
+    <link rel="modulepreload" href="/build/root-GM4NIA3P.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-NEQOG2EM.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-7FE2VYJE.js" />
+    <link rel="modulepreload" href="/build/routes/docs-IF7CZDK4.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-S56V2YZW.js" />
+    <link rel="modulepreload" href="/build/_shared/chunk-6QSHGQMW.js" />
+    <link rel="modulepreload" href="/build/routes/docs.button-P4T6XJQU.js" />
+    <script>window.__remixContext = { "state": { "loaderData": { "root": null, "routes/docs": null, "routes/docs.button": null }, "actionData": null, "errors": null }, "future": { "unstable_cssModules": false, "unstable_cssSideEffectImports": false, "unstable_dev": false, "unstable_postcss": false, "unstable_tailwind": false, "unstable_vanillaExtract": false, "v2_errorBoundary": true, "v2_meta": false, "v2_normalizeFormMethod": true, "v2_routeConvention": true } };</script>
+    <script type="module" async>import "/build/manifest-261F0EBC.js";
+        import * as route0 from "/build/root-GM4NIA3P.js";
+        import * as route1 from "/build/routes/docs-IF7CZDK4.js";
+        import * as route2 from "/build/routes/docs.button-P4T6XJQU.js";
+        window.__remixRouteModules = { "root": route0, "routes/docs": route1, "routes/docs.button": route2 };
+
+        import("/build/entry.client-JUQKH57E.js");</script>
+</body>
+
+</html>
